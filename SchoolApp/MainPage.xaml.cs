@@ -14,4 +14,9 @@ public partial class MainPage : ContentPage
         count++;
         StatusLabel.Text = $"Button clicked {count} times";
     }
+
+    private async void OnOpenStudentsClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(StudentsPage));
+    }
 }
